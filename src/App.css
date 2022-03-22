@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+/*=============================================*
+ * Default Theme CSS
+ * Author: KL
+ * Creation: Nov. 15, 2018
+ *=============================================*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  -webkit-text-size-adjust: 100%;
+  background-color: #ffffff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: 1.4em;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Inter', 'Open Sans', 'Source Sans Pro', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  background-color: #ffffff;
+  color: #222222;
 }
+::selection {
+  background: #ed6a08;
+  color: #ffffff;
+}
+::-moz-selection {
+  background: #ed6a08;
+  color: #ffffff;
+}
+/*--- APP WRAPPER --*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*--- HEADER ---*/
+.header {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  flex-wrap: nowrap
 }
-
-.App-link {
-  color: #61dafb;
+.header .logo {
+  display: inline-block;
+  font-size: 30px;
+  margin-right: 15px;
 }
-
+.header h1 {
+  font-size: 20px;
+  line-height: 22px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 3s linear;
+  }
+}
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  0%   {transform: rotate(0deg);}
+  25%  {transform: rotate(15deg);}
+  50%  {transform: rotate(0deg);}
+  75%  {transform: rotate(-15deg);}
+  100% {transform: rotate(0deg);}
+}
+/*--- CONTAINER ---*/
+.container {
+  display: block;
+  align-items: center;
+  width: 850px;
+  max-width: 100%;
+  margin: auto;
+  padding: 0 20px;
+}
+/*--- FORM ---*/
+.form {
+  display: grid;
+  grid-template: 40px 40px / 1fr 1fr;
+  gap: 17px;
+}
+
+.form--input {
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  border: 1px solid #D5D4D8;
+  text-indent: 5px;
+}
+
+.form--button {
+  grid-column: 1 / -1;
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.meme--image {
+  display: block;
+  margin: auto;
+  max-width: 100%;
 }
